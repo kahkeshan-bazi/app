@@ -16,126 +16,105 @@ body {
   }
   
   /* استایل هدر */
-  header {
-    position: fixed;
-    top: 6px; /* فاصله از بالای صفحه */
-    right: 15px; /* فاصله از سمت راست صفحه */
-    left: 15px; /* فاصله از سمت چپ صفحه */
-    height: 60px;
-    background: rgba(28, 179, 224, 0.582);
-    backdrop-filter: blur(10px);
-    border-radius: 12px; /* گوشه های گرد کل هدر */
+  .site-header {
+    background: rgba(61, 130, 187, 0.664);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 15px 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* فاصله داخلی از چپ و راست */
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    z-index: 10000;
   }
   
-  /* کانتینر لوگو + متن */
-  .logo-container {
+  /* Logo */
+  .logo-link {
     display: flex;
     align-items: center;
-    gap: 15px; /* فاصله بین متن و لوگو */
+    gap: 12px;
     text-decoration: none;
-    cursor: pointer;
-    color: #222;
-    user-select: none;
+    color: #1a202c;
+    font-weight: bold;
+    font-size: 20px;
     transition: color 0.3s ease;
-    white-space: nowrap; /* یک خط */
-    direction: rtl; /* جهت راست به چپ */
   }
   
-  .logo-container:hover {
-    color: #0078ff; /* رنگ هاور */
+  .logo-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
   }
   
-  /* عکس لوگو */
-  .logo-container img {
-    height: 44px;
-    border-radius: 8px;
-    display: block;
+  .logo-link:hover {
+    color: #007bff;
   }
   
-  /* متن کنار لوگو */
-  .logo-text {
-    font-family: 'Vazir', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    user-select: none;
-    text-decoration: none; /* بدون خط زیر متن */
-    color: inherit; /* از رنگ والد میگیره */
+  .logo-link img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  /* منو سمت چپ هدر */
-  .nav-menu {
+  /* Navigation */
+  .main-nav {
     display: flex;
-    align-items: center;
     gap: 25px;
-    font-family: 'Vazir', sans-serif;
-    font-size: 1rem;
-    user-select: none;
   }
   
-  /* لینک های منو */
-  .nav-menu a {
-    color: #222;
+  .main-nav a {
     text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background-color 0.25s ease;
+    color: #1a1a1a;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
   
-  .nav-menu a:hover {
-    background-color: rgba(0,0,0,0.1);
+  .main-nav a:hover {
+    background-color: #eaeaea;
+    color: #2c2c2c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* منوی همبرگری موبایل */
+  /* Hamburger */
   .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    width: 28px;
-    height: 22px;
-    justify-content: space-between;
+    gap: 4px;
   }
   
   .menu-toggle span {
-    display: block;
-    height: 3.5px;
-    width: 100%;
-    background-color: #222;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
     border-radius: 3px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
   }
   
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* منوی موبایل */
+  /* Responsive */
   @media (max-width: 768px) {
     .main-nav {
-      display: none;
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       flex-direction: column;
-      background-color: #333;
-      position: fixed; /* تغییر به fixed */
-      top: 64px; /* فاصله از بالای صفحه؛ با ارتفاع هدر هماهنگ کن */
-      right: 0;
-      padding: 10px;
-      width: 200px;
-      z-index: 98; /* زیر منو بره زیر هدر اگه لازم بود */
-      border-bottom-left-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      gap: 15px;
+      padding: 20px;
+      display: none;
     }
   
     .main-nav.active {
