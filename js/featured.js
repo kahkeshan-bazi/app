@@ -38,8 +38,7 @@ document.addEventListener('click', function (e) {
   const btn = e.target.closest('.btn-share');
   if (btn) {
     const link = btn.dataset.link;
-    const basePath = window.location.pathname.split('/')[1]; // برمی‌گردونه "app"
-const fullUrl = `${window.location.origin}/${basePath}/${link}`;
+   const fullUrl = `${window.location.origin}/app/${link}`;
     navigator.clipboard.writeText(fullUrl)
       .then(() => alert('لینک محصول کپی شد!'))
       .catch(() => alert('خطا در کپی کردن لینک.'));
