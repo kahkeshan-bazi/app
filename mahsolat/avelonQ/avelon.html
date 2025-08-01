@@ -9,27 +9,28 @@
 </head>
 
 <body>
-  <header>
-    <!-- منوی همبرگری برای موبایل -->
-    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" role="button" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-container">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo1.png" alt="لوگوی سایت" />
+            <span class="logo-text">کهکشان بازی</span>
+          </a>
+      </div>
+  
+      <nav class="main-nav">
+        <a href="index.html">صفحه اصلی</a>
+        <a href="products.html">محصولات</a>
+        <a href="feed.html">مقالات</a>
+        <a href="contact.html">تماس با ما</a>
+      </nav>
+  
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  
-    <!-- منوی اصلی سمت چپ -->
-    <nav class="nav-menu" id="navMenu">
-      <a href="../../index.html">خانه</a>
-      <a href="../../products.html">محصولات</a>
-      <a href="../../contact.html">تماس باما</a>
-      <a href="../../feed.html">مقالات</a>
-    </nav>
-  
-    <!-- لوگو و متن کهکشان بازی سمت راست -->
-    <a href="../../index.html" class="logo-container" aria-label="خانه کهکشان بازی">
-      <img src="../../images/logo1.png" alt="لوگو کهکشان بازی" />
-      <span class="logo-text">کهکشان بازی</span>
-    </a>
   </header>
   
       
