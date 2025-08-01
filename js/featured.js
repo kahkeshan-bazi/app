@@ -38,9 +38,15 @@ document.addEventListener('click', function (e) {
   const btn = e.target.closest('.btn-share');
   if (btn) {
     const link = btn.dataset.link;
-   const fullUrl = `${window.location.origin}/app/${link}`;
+
+    // استخراج مسیر پروژه (مثلاً /app)
+    const pathParts = window.location.pathname.split('/');
+    const repoName = pathParts.length > 1 ? pathParts[1] : '';
+    const fullUrl = `${window.location.origin}/${repoName}/${link}`;
+
     navigator.clipboard.writeText(fullUrl)
       .then(() => alert('لینک محصول کپی شد!'))
       .catch(() => alert('خطا در کپی کردن لینک.'));
   }
 });
+
