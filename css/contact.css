@@ -3,11 +3,16 @@ body {
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
-    padding: 1rem;
+    padding: 0rem;
     direction: rtl;
     text-align: right;
   }
-  
+  .page-wrapper {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
   h1, h2 {
     color: #222;
     margin-bottom: 1rem;
