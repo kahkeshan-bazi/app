@@ -1,0 +1,340 @@
+/* فایل CSS برای بازی اولون ماموریت */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  /* استایل هدر */
+  header {
+    position: fixed;
+    top: 6px; /* فاصله از بالای صفحه */
+    right: 15px; /* فاصله از سمت راست صفحه */
+    left: 15px; /* فاصله از سمت چپ صفحه */
+    height: 60px;
+    background: rgba(28, 179, 224, 0.582);
+    backdrop-filter: blur(10px);
+    border-radius: 12px; /* گوشه های گرد کل هدر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* فاصله داخلی از چپ و راست */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    z-index: 10000;
+  }
+  
+  /* کانتینر لوگو + متن */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* فاصله بین متن و لوگو */
+    text-decoration: none;
+    cursor: pointer;
+    color: #222;
+    user-select: none;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* یک خط */
+    direction: rtl; /* جهت راست به چپ */
+  }
+  
+  .logo-container:hover {
+    color: #0078ff; /* رنگ هاور */
+  }
+  
+  /* عکس لوگو */
+  .logo-container img {
+    height: 44px;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  /* متن کنار لوگو */
+  .logo-text {
+    font-family: 'Vazir', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    user-select: none;
+    text-decoration: none; /* بدون خط زیر متن */
+    color: inherit; /* از رنگ والد میگیره */
+  }
+  
+  /* منو سمت چپ هدر */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1rem;
+    user-select: none;
+  }
+  
+  /* لینک های منو */
+  .nav-menu a {
+    color: #222;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease;
+  }
+  
+  .nav-menu a:hover {
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  /* منوی همبرگری موبایل */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 28px;
+    height: 22px;
+    justify-content: space-between;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    height: 3.5px;
+    width: 100%;
+    background-color: #222;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* منوی موبایل */
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: fixed;
+      top: 90px;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px;
+      transform: translateY(-120%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 9998;
+    }
+    
+    .nav-menu.active {
+      transform: translateY(0);
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  
+  
+  
+  .product-page {
+    padding: 40px 20px;
+    background: #fff;
+  }
+  
+  .product-intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+  }
+  
+  .product-details {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .product-details h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #e91e63;
+  }
+  
+  .product-details ul {
+    padding-right: 20px;
+    list-style: square;
+  }
+  
+  .price-box {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #2e7d32;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .discount {
+    color: #e91e63;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .description, .game-components, .product-table, .gallery {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #1d1d1d;
+    border-bottom: 2px solid #e91e63;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .product-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .gallery-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background: #1d1d1d;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #e91e63;
+  }
+  
+  .footer a {
+    color: #e91e63;
+    text-decoration: none;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    border-radius: 12px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .contact {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Vazir', Tahoma, sans-serif;
+    direction: rtl;
+  }
+  
+  .contact h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #222;
+  }
+  
+  .contact p {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  .contact a {
+    color: #0059ff;
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-contact {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: #fbff02;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-contact:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 14px rgba(0,86,179,0.5);
+  }
+  
