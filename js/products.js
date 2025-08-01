@@ -11,7 +11,7 @@ const products = [
       title: "بازی اولون کویست مافیایی",
       price: "315,000 تومان",
       image: "images/products/avelon.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/avelonQ/avelon.html"
     },
     {
       id: 3,
@@ -113,4 +113,5 @@ const products = [
     }
   
   ];
+
   
