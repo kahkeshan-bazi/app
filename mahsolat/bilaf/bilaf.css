@@ -101,12 +101,27 @@ body {
     }
   
     .main-nav {
-      top: 60px; /* یا ارتفاعی که پایین لوگو نمایش داده بشه */
+      display: none;
+      position: absolute;
+      top: 70px;
       right: 0;
       width: 100%;
-      background-color: #fff;
+      flex-direction: column;
+      background: white;
+      border-radius: 0 0 12px 12px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+  
+    .main-nav.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: flex;
     }
   }
+  
   
   
   
