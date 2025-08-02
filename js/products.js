@@ -18,7 +18,7 @@ const products = [
       title: "اونو ماینکرفت",
       price: "320,000 تومان",
       image: "images/products/uno-min.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/mine-uno/uno-main.html"
     },
     {
       id: 4,
@@ -115,3 +115,4 @@ const products = [
   ];
 
   
+
