@@ -65,7 +65,7 @@ const products = [
     {
       id: 11,
       title: "مافیا کلاسیک پیشرفته",
-      price: "195,000 تومان",
+      price: "238,000 تومان",
       image: "images/products/mafiaganjifa.jpg",
       link: "product-pages/1.html"
     },
@@ -115,6 +115,7 @@ const products = [
   ];
 
   
+
 
 
 
