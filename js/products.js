@@ -25,7 +25,7 @@ const products = [
       title: "بازی بیلاف spicy",
       price: "250,000 تومان",
       image: "images/products/spicy.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/bilaf/bilaf.html"
     },
     {
       id: 5,
@@ -115,4 +115,5 @@ const products = [
   ];
 
   
+
 
