@@ -93,22 +93,21 @@ body {
   }
   
   @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
+    .site-header .container {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
     }
   
     .main-nav {
-      position: absolute;
-      top: 70px; /* ارتفاع منوی باز شده */
-      right: 20px;
-      z-index: 999;
-    }
-  
-    .site-header {
-      padding: 10px 0;
+      top: 60px; /* یا ارتفاعی که پایین لوگو نمایش داده بشه */
+      right: 0;
+      width: 100%;
+      background-color: #fff;
     }
   }
+  
   
   
   .product-page {
