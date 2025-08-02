@@ -39,7 +39,7 @@ const products = [
       title: "راز هیتلر اقتصادی",
       price: "390,000 تومان",
       image: "images/products/s-hitler.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/hitler/hitler.html"
     },
     {
       id: 7,
@@ -115,6 +115,7 @@ const products = [
   ];
 
   
+
 
 
 
