@@ -1,11 +1,11 @@
 /* استفاده از فونت مناسب (در صورت نیاز فونت فارسی مثل Vazir یا Shabnam به صورت جداگانه ایمپورت شود) */
-body {
-    font-family: 'Tahoma', sans-serif;
-    background-color: #fafafa;
-    color: #222;
-    margin: 0;
-    padding: 0;
-    line-height: 1.8;
+
+
+  .main-content {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1200px;
+    box-sizing: border-box;
   }
   /* Header */
   .site-header {
@@ -127,6 +127,7 @@ body {
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   }
   
+  
   /* عنوان محصول */
   .product-title {
     text-align: center;
@@ -159,7 +160,23 @@ body {
   .product-image img:hover {
     transform: scale(1.03);
   }
+  .price-box {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #2e7d32;
+  }
   
+  .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+  }
+  
+  .discount {
+    color: #e91e63;
+    font-weight: bold;
+    margin-right: 10px;
+  }
   /* توضیحات محصول */
   .product-description {
     flex: 1 1 55%;
@@ -253,30 +270,27 @@ body {
 
   /* استایل فوتر */
   .footer {
-    background-color: #111;
-    color: #f1f1f1;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    border-top: 4px solid #ffcc00;
+    padding: 24px 0;
+  }
+  .footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
     text-align: center;
-    padding: 2rem 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    border-top: 3px solid #d63384;
-    margin-top: 4rem;
   }
-  
-  .footer p {
-    margin: 0.5rem 0;
-  }
-  
   .footer a {
-    color: #4dd0e1;
+    color: #ffcc00; /* یا رنگ دلخواه برای لینک داخل فوتر */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    text-decoration: underline;
   }
   
-  .footer a:hover {
-    color: #00bcd4;
-  }
   
   /* حالت ریسپانسیو برای موبایل */
   @media (max-width: 768px) {
@@ -294,10 +308,5 @@ body {
     }
   }
   
-  @media (max-width: 480px) {
-    .footer {
-      font-size: 0.9rem;
-      padding: 1.2rem 0.8rem;
-    }
-  }
+ 
   
