@@ -32,7 +32,7 @@ const products = [
       title: "تپه ندیده top ten",
       price: "445,000 تومان",
       image: "images/products/topten.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/top-ten/top-ten.html"
     },
     {
       id: 6,
@@ -115,5 +115,6 @@ const products = [
   ];
 
   
+
 
 
