@@ -46,7 +46,7 @@ const products = [
       title: "بازی قهوه قجری",
       price: "290,000 تومان",
       image: "images/products/qajari.jpg",
-      link: "product-pages/1.html"
+      link: "mahsolat/ghajari/ghajari.html"
     },
     {
       id: 9,
@@ -115,6 +115,7 @@ const products = [
   ];
 
   
+
 
 
 
